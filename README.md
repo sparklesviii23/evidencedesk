@@ -1,6 +1,30 @@
+<div align="center">
+
 # EvidenceDesk
 
-**A local-first workbench for systematic reviews and meta-analyses.** You write one search query, and
+### Every database. One query.
+
+**A local-first workbench for systematic reviews and meta-analyses.**
+
+![Python](https://img.shields.io/badge/python-3.12%20%7C%203.13-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-local%20server-009688?logo=fastapi&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-storage-003B57?logo=sqlite&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-agent%20ready-7C3AED)
+![PRISMA 2020](https://img.shields.io/badge/PRISMA-2020%20%2B%20PRISMA--S-4F46E5)
+![R metafor](https://img.shields.io/badge/R-metafor-276DC3?logo=r&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-42%20passing-2EA44F)
+![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
+
+[Screenshots](#screenshots) · [Install](#install) · [Query language](#the-query-language-edql) ·
+[Agent access](#agent-access-mcp--shell--rest) · [Docs](#documentation)
+
+<img src="docs/images/search.jpg" alt="EvidenceDesk search page: one query editor with live record, duplicate and screening totals" width="900">
+
+</div>
+
+---
+
+You write one search query, and
 EvidenceDesk compiles it for every biomedical database, runs it live and removes duplicates. It links reports
 of the same study, fetches open-access full texts and supports two-stage PICOS screening. It then produces
 PRISMA 2020 / PRISMA-S reporting from a single ledger, an evidence packet you can hand to a person or an AI
@@ -10,13 +34,48 @@ Everything runs on your own machine: a FastAPI server, a SQLite database and a p
 agent can drive the whole review through MCP, the shell or REST. Agent decisions are stored as proposals, and
 only a human reviewer can confirm them.
 
+> [!NOTE]
 > Status: v0.1. Working end to end on a live review (see [examples/angptl3_live_run](examples/angptl3_live_run)).
 > Connector verification status is listed in [docs/HANDOFF.md](docs/HANDOFF.md).
+
+### Highlights
+
+- 🔎 **One query, 8 databases.** EDQL compiles to PubMed, Europe PMC, ClinicalTrials.gov, OpenAlex, Scopus,
+  Embase, Web of Science and ScienceDirect, and labels every translation difference.
+- 🧬 **Duplicates and studies.** Identifier and fuzzy matching with undo. Reports are linked to studies,
+  never merged into them.
+- ✅ **Human-confirmed screening.** Two stages, several reviewers, adjudication. Agent proposals never count
+  on their own.
+- 📄 **Open full texts.** Seven open-access routes, with every attempt logged and OCR for scanned PDFs.
+- 📊 **PRISMA by construction.** Flow diagram and PRISMA-S appendix from one ledger, with 7 reconciliation
+  checks.
+- 🤖 **Agent ready.** 17 tools over MCP, the shell or REST.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/query-preview.jpg" alt="Per-database preview of the compiled native queries with fidelity notes"><br><sub><b>Query preview.</b> The exact native query for each database, with approximations flagged for approval.</sub></td>
+    <td width="50%"><img src="docs/images/search-dashboard.jpg" alt="Search run dashboard with per-database hits, unique records and overlap"><br><sub><b>Search dashboard.</b> Hits, retrieved records, unique contribution and overlap per database.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/results.jpg" alt="Results page listing deduplicated reports with sources and identifiers"><br><sub><b>Results.</b> Deduplicated reports, with uncertain matches queued for review.</sub></td>
+    <td><img src="docs/images/screening.jpg" alt="Screening page with a record, reviewer decisions and an agent proposal with a verified passage"><br><sub><b>Screening.</b> Reviewer decisions, plus agent proposals with passages checked against the source.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/fulltext.jpg" alt="Full-text page showing retrieval status per report"><br><sub><b>Full text.</b> Open-access retrieval status for every report.</sub></td>
+    <td><img src="docs/images/prisma-export.jpg" alt="Export page with the PRISMA 2020 flow diagram and reconciliation checks"><br><sub><b>Export.</b> PRISMA 2020 flow diagram, totals check and evidence packet download.</sub></td>
+  </tr>
+</table>
+
+<sub>Screenshots come from a live ANGPTL3 genome-editing test review. Its screening decisions were made by a
+test script and are not real eligibility judgements.</sub>
 
 ---
 
 ## Contents
 
+- [Screenshots](#screenshots)
 - [Why](#why)
 - [What it does](#what-it-does)
 - [Architecture](#architecture)
