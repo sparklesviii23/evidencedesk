@@ -1,0 +1,132 @@
+report_id,title,report_kind,ta,ta_basis,sought,ft_status,ft,ft_reason,study,retrieval
+1,"A Phase 1 Open-label, Multicenter, First-in-human, Ascending Dose Trial Evaluating the Safety and Tolerability of a Lipid Nanoparticle Formulation of CRISPR-Guide RNA-Cas9 Nuclease (CTX310) for In Vivo Editing of the Angiopoietin-like 3 (ANGPTL3) Gene in Participants With Refractory Dyslipidemias",registry,include,adjudicated,True,retrieved,include,,-1,assessed
+2,A Phase 1b Single Ascending Dose Study to Evaluate the Safety of VERVE-201 in Patients With Refractory Hyperlipidemia,registry,include,adjudicated,True,retrieved,include,,-2,assessed
+3,In Vivo CRISPR Base Editing of ANGPTL3 for Durable Lipid Lowering.,journal_article,include,2 reviewers agree,True,retrieved,include,,3,assessed
+4,"Clustered Regularly Interspaced Short Palindromic Repeats (CRISPR)-Based Genome Editing in Inherited Cardiovascular Diseases: Therapeutic Advances, Emerging Editing Platforms, and Translational Challenges.",review,exclude,2 reviewers agree,False,not_sought,,,-4,
+5,Precision genome editing strategies for enduring lipid lowering in atherosclerosis.,review,exclude,2 reviewers agree,False,not_sought,,,-5,
+6,Inhibition of angiopoietin-like protein 3 as a target for managing hypertriglyceridemia.,journal_article,include,2 reviewers agree,True,unavailable,include,,-6,assessed
+7,Promise of ANGPTL3 as a therapeutic target for controlling cholesterol levels.,review,exclude,2 reviewers agree,False,not_sought,,,-7,
+8,Phase 1 Trial of CRISPR-Cas9 Gene Editing Targeting ANGPTL3.,journal_article,include,2 reviewers agree,True,unavailable,include,,2,assessed
+9,Angiopoietin-like Protein 3 (ANGPTL3) Targeting in the Management of Dyslipidemias.,review,exclude,2 reviewers agree,False,not_sought,,,-9,
+10,Cas12a chRDNA-mediated in vivo genome editing for high specificity functional gene disruption.,journal_article,include,2 reviewers agree,True,retrieved,include,,-10,assessed
+11,"The Genetic Revolution in Cardiometabolic Disease: A Review of Novel RNA and Gene‐Editing Therapies Targeting APOC3, ANGPTL3, and Lp(a)",preprint,include,2 reviewers agree,True,retrieved,include,,-11,assessed
+12,"Somatic Genome Editing in Cardiovascular Disease: Platforms, Targets, and Translational Progress",preprint,include,adjudicated,True,unavailable,exclude,wrong population/model,4,assessed
+13,Nucleic Acid-Based Therapies - The Next Frontier in Treating Dyslipidemias.,review,exclude,2 reviewers agree,False,not_sought,,,-13,
+14,Base editing for precision therapeutics.,review,exclude,2 reviewers agree,False,not_sought,,,-14,
+15,Precise hepatic base editing of ASGR1 enables robust and durable LDLR-independent lipid lowering in vivo.,journal_article,include,2 reviewers agree,True,unavailable,include,,-15,assessed
+16,Clustered Regularly Interspaced Short Palindromic Repeats Genome Editing for Cardiovascular Disease: The Future Is Here.,journal_article,include,2 reviewers agree,True,unavailable,include,,-16,assessed
+17,In vivo base editing of Angptl3 via lipid nanoparticles to treat cardiovascular disease.,journal_article,include,2 reviewers agree,True,retrieved,include,,-17,assessed
+18,Olezarsen and Beyond: Emerging Targeted Treatments for Familial Chylomicronemia Syndrome and Related Triglyceride Disorders.,review,exclude,2 reviewers agree,False,not_sought,,,-18,
+19,CRISPR therapy for dyslipidemia.,review,exclude,2 reviewers agree,False,not_sought,,,-19,
+20,Durability of CRISPR-Cas9 Gene Editing Targeting ANGPTL3 with CTX310.,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-20,
+21,RNA Therapeutics in Cardiovascular Medicine: From Molecular Mechanisms to Clinical Practice.,review,exclude,2 reviewers agree,False,not_sought,,,-21,
+22,RNA-Targeted Therapeutics for Lipid Metabolic Disorders: From Bench to Bedside.,journal_article,include,2 reviewers agree,True,retrieved,include,,-22,assessed
+23,"Genetic inhibition of angiopoietin-like protein-3, lipids, and cardiometabolic risk.",journal_article,include,2 reviewers agree,True,retrieved,include,,-23,assessed
+24,Recent development in CRISPR-Cas systems for cardiac disease.,review,exclude,2 reviewers agree,False,not_sought,,,-24,
+25,"The Angiopoietin-like Protein (ANGPTL) Axis in Dyslipidemia: Mechanisms, Cardiovascular Risk, and Emerging Therapies.",review,exclude,2 reviewers agree,False,not_sought,,,-25,
+26,Therapeutic precision gene editing of cholesterol pathways as a gene therapy strategy for cardiovascular disease.,review,exclude,2 reviewers agree,False,not_sought,,,-26,
+27,New opportunities in the management and treatment of refractory hypercholesterolemia using in vivo CRISPR-mediated genome/base editing.,review,exclude,2 reviewers agree,False,not_sought,,,-27,
+28,ANGPTL3 deficiency impairs lipoprotein production and produces adaptive changes in hepatic lipid metabolism.,journal_article,include,adjudicated,True,retrieved,exclude,wrong population/model,8,assessed
+29,Novel Therapeutics for Familial Chylomicronemia Syndrome.,review,exclude,2 reviewers agree,False,not_sought,,,-29,
+30,Liver-specific in vivo base editing of Angptl3 via AAV delivery efficiently lowers blood lipid levels in mice.,journal_article,include,2 reviewers agree,True,retrieved,include,,1,assessed
+31,Therapeutic Gene Editing in Dyslipidemias.,review,exclude,2 reviewers agree,False,not_sought,,,-31,
+32,Liver-specific in vivo base editing of Angptl3 via AAV delivery efficiently lowers blood lipid levels in mice,preprint,include,2 reviewers agree,True,retrieved,include,,1,assessed
+33,Targeted Delivery of mRNA with Polymer-Lipid Nanoparticles for In Vivo Base Editing.,journal_article,include,2 reviewers agree,True,unavailable,include,,-33,assessed
+34,Inhibition of Angiopoietin-Like Protein 3 or 3/8 Complex and ApoC-III in Severe Hypertriglyceridemia.,review,exclude,2 reviewers agree,False,not_sought,,,-34,
+35,GalNAc-Lipid nanoparticles enable non-LDLR dependent hepatic delivery of a CRISPR base editing therapy.,journal_article,include,2 reviewers agree,True,retrieved,include,,-35,assessed
+36,Lipid nanoparticle-mediated codelivery of Cas9 mRNA and single-guide RNA achieves liver-specific in vivo genome editing of Angptl3.,journal_article,include,2 reviewers agree,True,unavailable,include,,-36,assessed
+37,Target-stabilized base editors enable robust high-fidelity RNA editing.,journal_article,include,2 reviewers agree,True,retrieved,include,,-37,assessed
+38,ANGPTL3 impacts proteinuria and hyperlipidemia in primary nephrotic syndrome.,journal_article,include,2 reviewers agree,True,retrieved,include,,7,assessed
+39,Phase 1 Trial of CRISPR-Cas9 Gene Editing Targeting ANGPTL3.,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,2,
+40,Molecular Therapeutics in Development to Treat Hyperlipoproteinemia.,review,exclude,2 reviewers agree,False,not_sought,,,-40,
+41,Phase 1 Trial of CRISPR-Cas9 Gene Editing Targeting ANGPTL3. Reply,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-41,
+42,Integrative analyses elucidate transcriptional regulatory functions of risk alleles for metabolic liver disease.,journal_article,unclear,2 reviewers agree,True,unavailable,exclude,wrong population/model,-42,assessed
+43,ANGPTL3 gene editing with CRISPR-Cas9: early trial insights.,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-43,
+44,A self-inactivating system for AAV-mediated in vivo base editing,preprint,include,2 reviewers agree,True,retrieved,include,,-44,assessed
+45,In vivo gene editing for lipid management: An early perspective from ANGPTL3-targeted CRISPR-Cas9 therapy.,journal_article,unclear,2 reviewers agree,True,unavailable,exclude,full text unavailable,-45,not_retrieved
+46,Gene Therapy for Lipid Management: Dawn of a New Era.,review,exclude,2 reviewers agree,False,not_sought,,,-46,
+47,"Gene therapy for liver diseases: methods, challenges and opportunities.",review,exclude,2 reviewers agree,False,not_sought,,,-47,
+48,"Gene Editing Therapies Targeting Lipid Metabolism for Cardiovascular Disease: Tools, Delivery Strategies, and Clinical Progress.",review,exclude,2 reviewers agree,False,not_sought,,,-48,
+49,"A Review of Progress on Targeting LDL Receptor-Dependent and -Independent Pathways for the Treatment of Hypercholesterolemia, a Major Risk Factor of ASCVD.",review,exclude,2 reviewers agree,False,not_sought,,,-49,
+50,ANGPLT3 Impacts Proteinuria and Hyperlipidemia in Primary Nephrotic Syndrome,preprint,include,2 reviewers agree,True,retrieved,include,,7,assessed
+51,Efficient in vivo base editing via single adeno-associated viruses with size-optimized genomes encoding compact adenine base editors.,journal_article,include,2 reviewers agree,True,retrieved,include,,-51,assessed
+52,Analysis of the Use of shRNA in Atherosclerosis Therapy: Current Status.,review,exclude,2 reviewers agree,False,not_sought,,,-52,
+53,Branched chemically modified poly(A) tails enhance the translation capacity of mRNA.,journal_article,include,2 reviewers agree,True,retrieved,include,,-53,assessed
+54,Advances in nucleic acid-targeted therapies for cardiovascular disease prevention.,review,exclude,2 reviewers agree,False,not_sought,,,-54,
+55,"Cholesterol metabolism: molecular mechanisms, biological functions, diseases, and therapeutic targets.",review,exclude,2 reviewers agree,False,not_sought,,,-55,
+56,The Progression of Treatment for Refractory Hypercholesterolemia: Focus on the Prospect of Gene Therapy.,review,exclude,2 reviewers agree,False,not_sought,,,-56,
+57,Advancements in the Treatment of Homozygous Familial Hypercholesterolemia.,review,exclude,2 reviewers agree,False,not_sought,,,-57,
+58,Lipid nanoparticles incorporating a GalNAc ligand enable in vivo liver  <i>ANGPTL3</i>  editing in wild-type and somatic  <i>LDLR</i>  knockout non-human primates,preprint,include,2 reviewers agree,True,retrieved,include,,-58,assessed
+59,Role of angiopoietin-like 3 (ANGPTL3) in regulating plasma level of low-density lipoprotein cholesterol.,journal_article,include,2 reviewers agree,True,retrieved,include,,-59,assessed
+60,Epigenome Editing Durability Varies Widely Across Cardiovascular Disease Target Genes.,preprint,unclear,2 reviewers agree,True,retrieved,include,,6,assessed
+61,A Versatile Nonviral Delivery System for Multiplex Gene-Editing in the Liver.,journal_article,unclear,2 reviewers agree,True,retrieved,include,,-61,assessed
+62,Recent advances in the management and implementation of care for familial hypercholesterolaemia.,review,exclude,2 reviewers agree,False,not_sought,,,-62,
+63,Gene and cell therapy approaches for familial hypercholesterolemia: An update.,review,exclude,2 reviewers agree,False,not_sought,,,-63,
+64,From traditional pharmacological towards nucleic acid-based therapies for cardiovascular diseases.,journal_article,include,2 reviewers agree,True,unavailable,include,,-64,assessed
+65,Reduced Blood Lipid Levels With In Vivo CRISPR-Cas9 Base Editing of ANGPTL3.,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-65,
+66,"Gene editing therapy ready for cardiovascular diseases: opportunities, challenges, and perspectives.",journal_article,unclear,2 reviewers agree,True,retrieved,exclude,wrong population/model,-66,assessed
+67,Dyslipidaemia: In vivo genome editing of ANGPTL3: a therapy for atherosclerosis?,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-67,
+68,"Gene editing for dyslipidemias: New tools to ""cut"" lipids.",review,exclude,2 reviewers agree,False,not_sought,,,-68,
+69,Familial Hypercholesterolemia: JACC Focus Seminar 4/4.,review,exclude,2 reviewers agree,False,not_sought,,,-69,
+70,Gene-based therapy in lipid management: the winding road from promise to practice.,review,exclude,2 reviewers agree,False,not_sought,,,-70,
+71,"Large, Diverse Population Cohorts of hiPSCs and Derived Hepatocyte-like Cells Reveal Functional Genetic Variation at Blood Lipid-Associated Loci.",journal_article,include,2 reviewers agree,True,retrieved,include,,-71,assessed
+72,"Dual-functional poly(disulfide) enables ""Once-and-for-all"" atherosclerosis therapy via precision hepatocyte base editing.",journal_article,exclude,2 reviewers agree,False,not_sought,,,-72,
+73,Phase 1 Trial of CRISPR-Cas9 Gene Editing Targeting ANGPTL3. Reply.,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-73,
+74,ANGPTL3 Gene Editing: Promise and Prudence.,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-74,
+75,Angiopoietin-like protein inhibitors: Promising agents for the treatment of familial hypercholesterolemia and atherogenic dyslipidemia.,review,exclude,2 reviewers agree,False,not_sought,,,-75,
+76,In Vivo CRISPR Base Editing of ANGPTL3 for Durable Lipid Lowering,dataset,unclear,2 reviewers agree,True,unavailable,exclude,full text unavailable,3,not_retrieved
+77,Geometric Error Assessment of CNC Turning Machine Tools with a Case Study on Gildemeister CTX 310 Eco,book,exclude,2 reviewers agree,False,not_sought,,,-77,
+78,SEQUENTIAL IN VIVO CRISPR BASE EDITING OF THE PCSK9 AND ANGPTL3 GENES IN NON-HUMAN PRIMATES,journal_article,unclear,2 reviewers agree,True,unavailable,exclude,full text unavailable,-78,not_retrieved
+79,An in vivo CRISPR base editing therapy to inactivate the ANGPTL3 gene: nomination of a development candidate for VERVE-201,journal_article,include,2 reviewers agree,True,unavailable,include,,-79,assessed
+80,Inhibiting angiopoietin-like protein 3: clear skies or clouds on the horizon?,letter_editorial,exclude,2 reviewers agree,False,not_sought,,,-80,
+81,"PRECLINICAL DATA SUPPORTING POTENTIAL EFFICACY OF VERVE-201 - AN INVESTIGATIONAL CRISPR BASE EDITING MEDICINE TARGETING ANGPTL3 - IN PRIMARY HUMAN CELLS, MICE, AND NON-HUMAN PRIMATES",journal_article,unclear,2 reviewers agree,True,unavailable,exclude,full text unavailable,-81,not_retrieved
+82,Abstract 16908: CTX310: An Investigational in vivo CRISPR-Based Therapy Efficiently and Durably Reduces ANGPTL3 Protein and Triglyceride Levels in Non-Human Primates After a Single Dose,conference_abstract,include,2 reviewers agree,True,unavailable,include,,-82,assessed
+83,Reversible genome editing,journal_article,include,2 reviewers agree,True,retrieved,include,,-83,assessed
+84,"An investigational in vivo base editing medicine targeting ANGPTL3, VERVE-201, achieves precise and durable liver editing in nonclinical studies",journal_article,unclear,2 reviewers agree,True,unavailable,exclude,full text unavailable,-84,not_retrieved
+85,Abstract 27: Therapeutic Targeting of Human Lipid Genes With in vivo CRISPR-Cas9 Genome Editing,conference_abstract,include,2 reviewers agree,True,unavailable,include,,-85,assessed
+86,"An investigational in vivo base editing medicine targeting ANGPTL3, VERVE-201, achieves potent and LDLR-independent liver editing in mouse models",journal_article,include,2 reviewers agree,True,unavailable,include,,-86,assessed
+87,Leveraging CRISPR/Cas Genome Editing Technology to Identify and Characterize Causal GWAS Variants for Blood Lipids,thesis,include,2 reviewers agree,True,unavailable,include,,-87,assessed
+88,"Abstract Thu095: Base editing approach to limit the expression of Asgr1, Pcsk9 and Angptl3 for the control of hyperlipidemia in mice",conference_abstract,include,2 reviewers agree,True,unavailable,include,,-88,assessed
+89,CRISPR E INTERFERÊNCIA POR RNA NA TERAPIA CARDIOVASCULAR: DA EDIÇÃO DE ANGPTL3 AO SILENCIAMENTO DA TRANSTIRRETINA,conference_abstract,unclear,2 reviewers agree,True,unavailable,exclude,wrong intervention,-89,assessed
+90,"Somatic Genome Editing in Cardiovascular Disease: Platforms, Targets, and Translational Progress",journal_article,include,2 reviewers agree,True,unavailable,include,,4,assessed
+91,ANGPTL3-lowering strategies to address residual cardiovascular risk,journal_article,exclude,2 reviewers agree,False,not_sought,,,-91,
+92,Abstract 532: ANGPTL3 in Type 2 Diabetes Mellitus,conference_abstract,include,2 reviewers agree,True,unavailable,include,,-92,assessed
+93,Abstract 116: Angptl3 Regulates Hepatic Lipoprotein Production: A New Model For Lipid Lowering?,conference_abstract,unclear,2 reviewers agree,True,unavailable,exclude,wrong population/model,-93,assessed
+94,Development on postprocessor of DMG CTX310 turning - milling machine tool based on NX,journal_article,exclude,2 reviewers agree,False,not_sought,,,-94,
+95,Clinical Translation of Gene and Genome Editing Therapies for Lipoprotein Disorders: A Systematic Review of Trial Design Targets and Safety,journal_article,exclude,2 reviewers agree,False,not_sought,,,-95,
+96,"Targeting ANGPTL3 for Lipid Lowering in Atherosclerotic Cardiovascular Disease: A Narrative Review of Genetic, Preclinical and Clinical Evidence",review,exclude,2 reviewers agree,False,not_sought,,,-96,
+97,Abstract 115: Angptl3 Deficiency Impairs Triglyceride-rich Lipoprotein Production and Produces Adaptive Changes in Hepatic Lipid Metabolism,conference_abstract,unclear,2 reviewers agree,True,unavailable,exclude,wrong population/model,8,assessed
+98,Abstract 97: Genotype to Phenotype: Function of Common Noncoding and Rare Coding Variants In ANGPTL3,conference_abstract,include,2 reviewers agree,True,unavailable,include,,-98,assessed
+99,CRISPR gene editing of angiopoietin-like 3: toward one-time precision therapy for dyslipidaemia,journal_article,include,2 reviewers agree,True,retrieved,include,,-99,assessed
+100,Lipid Nanoparticles Delivery of CRISPR/Cas9 Targeting PCSK9 and ANGTPL3 as New Therapeutic Gene Editing Modalities for Potential Long-Lasting Treatment Of Dyslipidemia,journal_article,include,2 reviewers agree,True,unavailable,include,,-100,assessed
+101,CRISPR-Nanoparticle Delivery Systems for Gene Editing of Obesity and Diabetes Targets,journal_article,include,2 reviewers agree,True,retrieved,include,,-101,assessed
+102,Development of CRISPR/Cas9 Mediated in Vivo Gene-editing Therapy for Cardiovascular Disease,thesis,include,2 reviewers agree,True,unavailable,include,,-102,assessed
+103,Pioneering Precision Medicine: Patient-Specific In Vivo CRISPR-Cas9 Gene Editing for the Treatment of a Rare SCN5A-Related Genetic Disorder with Severe Cardiovascular Implications,journal_article,include,2 reviewers agree,True,unavailable,include,,-103,assessed
+104,Abstract 16254: Comparative Efficacy and Safety of in vivo CRISPR Gene Editing Therapies versus PCSK9 Monoclonal Antibodies in Familial Hypercholesterolemia: A Systemic Review and Network Meta-Analysis,conference_abstract,include,2 reviewers agree,True,unavailable,include,,-104,assessed
+105,THE LATEST APPROACHES TO DYSLIPIDEMIA MANAGEMENT. A NARRATIVE REVIEW,review,exclude,2 reviewers agree,False,not_sought,,,-105,
+106,DIAGNOSTIC OF CNC LATHE WITH QC 20 BALLBAR SYSTEM,journal_article,exclude,2 reviewers agree,False,not_sought,,,-106,
+107,Innovative low-cost vibration monitoring system to unleash the power of condition monitoring,preprint,exclude,2 reviewers agree,False,not_sought,,,5,
+108,Innovative low-cost vibration monitoring system to unleash the power of condition monitoring,preprint,exclude,2 reviewers agree,False,not_sought,,,5,
+109,Tool life of ceramic wedges during precise turning of tungsten,conference_abstract,exclude,2 reviewers agree,False,not_sought,,,-109,
+110,THE IMPACT OF THE TYPE OF CUTTING FLUID ON THE TURNING PROCESS,journal_article,exclude,2 reviewers agree,False,not_sought,,,-110,
+111,Isogenic Human Pluripotent Stem Cell Models of Cardiovascular Disease-Associated Genetic Variation,thesis,unclear,2 reviewers agree,True,unavailable,exclude,wrong population/model,-111,assessed
+112,Modelling and Prediction of Surface Roughness in CNC Turning Process using Neural Networks,journal_article,exclude,2 reviewers agree,False,not_sought,,,-112,
+113,Tool wear in dry turning and wet turning with non-toxic cutting fluid,journal_article,exclude,2 reviewers agree,False,not_sought,,,-113,
+114,Hard Turning Operation of Alloy Tool Steel (AISI D3) Using Cubic Boron Cutting Tool,conference_abstract,exclude,2 reviewers agree,False,not_sought,,,-114,
+115,Epigenome Editing Durability Varies Widely Across Cardiovascular Disease Target Genes,journal_article,unclear,2 reviewers agree,True,retrieved,exclude,wrong population/model,6,assessed
+116,"Cutting force and surface roughness prediction of Al 6065 T6 during turning operation using response surface methodology, machine learning, and simulation-based approach",journal_article,exclude,2 reviewers agree,False,not_sought,,,-116,
+117,"Ischaemic heart disease: prevention, management, mechanisms, and new therapeutic targets",journal_article,include,2 reviewers agree,True,unavailable,include,,-117,assessed
+118,"CRISPR ile Kolesterol Tedavisi: LDL'de %52,5 Düşüş",journal_article,unclear,2 reviewers agree,True,unavailable,exclude,wrong intervention,-118,assessed
+119,Statistical Analysis of Microarray Data to Identify Key Gene Expression Patterns in Primary Hyperoxaluria,journal_article,include,2 reviewers agree,True,unavailable,include,,-119,assessed
+120,New advances in the treatment of hyperlipidemia,journal_article,include,2 reviewers agree,True,unavailable,include,,-120,assessed
+121,首次参与 满载而归——德马吉参加CCMT2006，收获颇丰,journal_article,exclude,2 reviewers agree,False,not_sought,,,-121,
+122,Dyslipidaemias and cardiovascular diseases: beyond cholesterol and atherosclerotic plaques,journal_article,include,2 reviewers agree,True,unavailable,include,,-122,assessed
+123,Genetic Risk Factors for Atherosclerosis: What's New in Genomic Medicine?,journal_article,unclear,2 reviewers agree,True,retrieved,include,,-123,assessed
+124,Near Minimum Material Zone: A New Concept to Reduce the Weight of the Aircraft Components in Machining Using Lean Six Sigma Methodology,conference_abstract,exclude,2 reviewers agree,False,not_sought,,,-124,
+125,"The subtle red line between combating and resolving inflammation in the cardiovascular disease, a “silent sniper”",journal_article,include,2 reviewers agree,True,retrieved,include,,-125,assessed
+126,Engineering a versatile lipoMSN delivery platform for the development of gene and drug therapies,journal_article,include,2 reviewers agree,True,unavailable,include,,-126,assessed
+127,The Application of Adeno-asscociated Virus in Lipid Metabolism Research and Lipid-lowering Gene Therapy,journal_article,include,2 reviewers agree,True,unavailable,include,,-127,assessed
+128,"A NEW TECHNIQUE - NEAR MINIMUM MATERIAL ZONE, TO REDUCE THE WEIGHT OF THE COMPONENTS IN MACHINING",journal_article,exclude,2 reviewers agree,False,not_sought,,,-128,
+129,Conceptual Design of CLTL-76: A Novel 76-Amino Acid Hybrid Chimeric Peptide Vector for Liver-Targeted Gene Therapy in Coronary Artery Disease Prevention,preprint,unclear,2 reviewers agree,True,unavailable,exclude,wrong population/model,-129,assessed
+130,Statistical and experimental methods for causal inference at complex trait associated loci,journal_article,include,2 reviewers agree,True,unavailable,include,,-130,assessed
+131,RNA in the spotlight: the dawn of RNA therapeutics in the treatment of human disease,journal_article,include,2 reviewers agree,True,unavailable,include,,-131,assessed

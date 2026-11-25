@@ -1,0 +1,107 @@
+{
+ "identification": {
+  "records_total": 256,
+  "by_source": {
+   "ctgov": 2,
+   "europepmc": 69,
+   "openalex": 119,
+   "pubmed": 66
+  },
+  "databases": {
+   "europepmc": 69,
+   "openalex": 119,
+   "pubmed": 66
+  },
+  "registers": {
+   "ctgov": 2
+  },
+  "other_methods": {},
+  "databases_total": 254,
+  "registers_total": 2,
+  "other_total": 0,
+  "duplicates_removed": 125,
+  "removed_other_reasons": 0
+ },
+ "dedup": {
+  "record_link_methods": {
+   "new": 131,
+   "id": 125
+  },
+  "merge_events": {},
+  "pending_uncertain_matches": 0
+ },
+ "screening": {
+  "records_screened": 131,
+  "records_excluded": 60,
+  "awaiting_screening": 0
+ },
+ "retrieval": {
+  "reports_sought": 71,
+  "reports_not_retrieved": 5,
+  "retrieval_pending": 0
+ },
+ "eligibility": {
+  "reports_assessed": 66,
+  "reports_excluded": 11,
+  "exclusion_reasons": {
+   "wrong population/model": 9,
+   "wrong intervention": 2
+  },
+  "awaiting_classification": 0
+ },
+ "included": {
+  "reports": 55,
+  "studies": 53
+ },
+ "checks": [
+  {
+   "check": "records = databases + registers + other",
+   "left": 256,
+   "right": 256,
+   "ok": true
+  },
+  {
+   "check": "records = duplicates removed + records screened",
+   "left": 256,
+   "right": 256,
+   "ok": true
+  },
+  {
+   "check": "screened = excluded + sought + awaiting screening",
+   "left": 131,
+   "right": 131,
+   "ok": true
+  },
+  {
+   "check": "sought = not retrieved + retrieval pending + assessed",
+   "left": 71,
+   "right": 71,
+   "ok": true
+  },
+  {
+   "check": "assessed = excluded + included + awaiting classification",
+   "left": 66,
+   "right": 66,
+   "ok": true
+  },
+  {
+   "check": "excluded = sum of exclusion reasons",
+   "left": 11,
+   "right": 11,
+   "ok": true
+  },
+  {
+   "check": "included studies <= included reports",
+   "left": 53,
+   "right": 53,
+   "ok": true
+  },
+  {
+   "check": "review complete (no pending items)",
+   "left": 0,
+   "right": 0,
+   "ok": true,
+   "detail": []
+  }
+ ]
+}

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EvidenceDesk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/static/style.css">
+<script>window.ED_TOKEN = "__TOKEN__";</script>
+</head>
+<body>
+<canvas id="cosmos" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="brand" href="#" onclick="showTab('search');return false" aria-label="EvidenceDesk home">
+    <span class="orb" aria-hidden="true"></span><span class="brand-name">EvidenceDesk</span>
+  </a>
+
+  <nav id="tabs" class="navpill glass" aria-label="Workflow">
+    <span class="nav-indicator" aria-hidden="true"></span>
+    <button data-tab="search" class="active"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span class="nav-label">Search</span><span class="nav-hint" id="nh-search"></span></button>
+    <button data-tab="records"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg><span class="nav-label">Results</span><span class="nav-hint" id="nh-records"></span></button>
+    <button data-tab="screening"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12.2 2.4 2.4 4.6-5"/></svg><span class="nav-label">Screen</span><span class="nav-hint" id="nh-screening"></span></button>
+    <button data-tab="fulltext"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span class="nav-label">Full text</span><span class="nav-hint" id="nh-fulltext"></span></button>
+    <button data-tab="prisma"><svg viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg><span class="nav-label">Export</span><span class="nav-hint" id="nh-prisma"></span></button>
+    <div class="more">
+      <button type="button" class="more-btn" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="18" cy="12" r="1.3"/></svg><span class="nav-label">More</span></button>
+      <div class="more-menu glass" role="menu">
+        <button data-tab="protocol" role="menuitem"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/></svg><span><b>PICOS protocol</b><small>Criteria, versions, draft a search</small></span></button>
+        <button data-tab="studies" role="menuitem"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="10" height="10" rx="2"/><rect x="10" y="10" width="10" height="10" rx="2"/></svg><span><b>Studies</b><small>Link reports of the same study</small></span></button>
+        <button data-tab="adjudication" role="menuitem"><svg viewBox="0 0 24 24"><path d="M12 4v16M6 8h12M4 14l2-6 2 6a2 2 0 0 1-4 0zM16 14l2-6 2 6a2 2 0 0 1-4 0z"/></svg><span><b>Adjudication</b><small>Resolve reviewer disagreements</small></span><span class="nav-hint" id="nh-adjudication"></span></button>
+        <button data-tab="extraction" role="menuitem"><svg viewBox="0 0 24 24"><path d="M17 5H7l6 7-6 7h10"/></svg><span><b>Extraction &amp; analysis</b><small>Data rows, R meta-analysis</small></span></button>
+        <button data-tab="settings" role="menuitem"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H20m-3 0v3m-3-3v2"/></svg><span><b>Databases &amp; keys</b><small>Connections and API keys</small></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="top-right">
+    <div class="review-pill glass"><span class="rp-label">Review</span><select id="reviewSel" title="Active review"></select></div>
+    <button id="newReviewBtn" class="round glass" title="New review" aria-label="New review"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ======================================================== SEARCH -->
+<section id="tab-search" class="tab active">
+  <header class="hero">
+    <p class="kicker reveal">Systematic review search</p>
+    <h1 class="reveal">Every database.<br><span class="soft">One query.</span></h1>
+    <p class="lede reveal">Write it once. EvidenceDesk translates it for each database, searches them together, removes duplicates and shows where every record came from.</p>
+    <div id="miniLedger" class="ledger reveal" aria-label="Review totals"></div>
+  </header>
+
+  <div class="composer glass reveal">
+    <div class="composer-top">
+      <div class="tabs-mini">
+        <select id="savedSel" class="ghost-select"><option value="">Saved queries</option></select>
+        <input id="savedName" placeholder="Name this query" size="14" class="ghost-input">
+        <button id="saveQueryBtn" class="text-btn">Save</button>
+        <button id="rerunBtn" class="text-btn" title="Run the saved query again and show what is new">Rerun &amp; compare</button>
+      </div>
+      <a href="#" id="grammarLink" class="text-btn">Syntax guide</a>
+    </div>
+    <div class="editor-wrap">
+      <div class="editor"><pre id="hl" aria-hidden="true"></pre><textarea id="q" spellcheck="false" autocomplete="off" aria-label="Search query"></textarea></div>
+      <ul id="ac" class="ac hidden"></ul>
+    </div>
+    <div id="qStatus" class="qstatus"></div>
+    <div class="composer-bottom">
+      <div id="sourceChips" class="chips"></div>
+      <div class="actions">
+        <button id="previewBtn" class="btn-soft">Preview</button>
+        <button id="runBtn" class="btn-primary"><span>Search all</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <details class="composer-opts"><summary>Options</summary>
+      <label class="inline">Max records per database <input id="maxRec" type="number" value="5000" min="10" class="ghost-input" style="width:90px"></label>
+    </details>
+  </div>
+
+  <div id="preview" class="grid-cards"></div>
+
+  <div id="runArea" class="hidden">
+    <div class="section-title"><h2>Results</h2><span id="runId" class="meta"></span><div id="runProgress" class="progress"><i></i></div></div>
+    <div id="statTiles" class="stats"></div>
+    <div id="dashboard"></div>
+    <div id="nextSteps"></div>
+  </div>
+  <div id="diff"></div>
+
+  <div class="stack">
+    <details class="glass fold"><summary>Search history</summary><div id="runsList" class="table-wrap"></div></details>
+    <details class="glass fold"><summary>Add results from a database without API access</summary>
+      <p class="lede small">Run the translated query on Ovid, Embase, CENTRAL, CINAHL or a conference site, export, and import the file here. It joins the same deduplication and screening.</p>
+      <form id="importForm" class="form-grid">
+        <label>Export file<input type="file" name="file" required></label>
+        <label>Platform<input name="platform" required placeholder="ovid_embase"></label>
+        <label>Search date<input name="search_date" type="date"></label>
+        <label class="full">Query exactly as run<textarea name="native_query" rows="3"></textarea></label>
+        <label class="inline"><input type="checkbox" name="register" value="true"> Trial register</label>
+        <div class="right"><button class="btn-primary small">Import</button></div>
+      </form><pre id="importMsg" class="msg"></pre>
+    </details>
+  </div>
+</section>
+
+<!-- ======================================================== RESULTS / DEDUP -->
+<section id="tab-records" class="tab">
+  <header class="head"><p class="kicker">Step 2</p><h1>Results</h1>
+    <p class="lede">Every record from every database is kept. Exact duplicates are merged by DOI and PubMed ID. Anything uncertain waits for you here.</p></header>
+  <div class="glass card-lg">
+    <div class="card-head"><h2>Possible duplicates</h2><span id="dedupCount" class="count"></span></div>
+    <div id="dedupList"></div>
+  </div>
+  <div class="glass card-lg">
+    <div class="card-head"><h2>All reports</h2><input id="repSearch" class="search-input" placeholder="Search title, DOI or PMID"></div>
+    <div id="reportsList" class="list"></div>
+  </div>
+  <details class="glass fold"><summary>Merge history</summary><div id="mergeEvents" class="table-wrap"></div></details>
+</section>
+
+<!-- ======================================================== SCREENING -->
+<section id="tab-screening" class="tab">
+  <header class="head row-head"><div><p class="kicker">Step 3</p><h1>Screen</h1></div>
+    <div class="toolbar">
+      <select id="stage" class="pill-select"><option value="title_abstract">Title &amp; abstract</option><option value="full_text">Full text</option></select>
+      <select id="sFilter" class="pill-select"><option value="all">All</option><option value="mine_todo">My to-do</option><option value="pending">Pending</option><option value="conflict">Conflicts</option><option value="unclear">Unclear</option><option value="decided">Decided</option></select>
+      <input id="reviewer" class="pill-input" placeholder="Your name" size="12">
+      <button id="kwRank" class="btn-soft" title="Rank by protocol terms (a priority only, never a decision)">Rank</button>
+    </div></header>
+  <div class="split">
+    <div id="sQueue" class="list glass queue"></div>
+    <div id="sDetail" class="detail glass"><div class="empty"><div class="empty-orb"></div><p>Choose a record to screen.</p><small>Agent suggestions appear in amber and never count until a reviewer confirms them.</small></div></div>
+  </div>
+</section>
+
+<!-- ======================================================== FULL TEXT -->
+<section id="tab-fulltext" class="tab">
+  <header class="head row-head"><div><p class="kicker">Step 4</p><h1>Full text</h1>
+    <p class="lede">Open-access copies from PubMed Central, Europe PMC, Unpaywall, OpenAlex and openly licensed publisher links. Every attempt is recorded.</p></div>
+    <div class="toolbar"><input id="retrieveIds" class="pill-input" placeholder="Report IDs (optional)"><button id="retrieveFT" class="btn-primary"><span>Fetch full texts</span></button></div></header>
+  <div id="ftSummary"></div>
+  <div id="ftList" class="list glass"></div>
+</section>
+
+<!-- ======================================================== EXPORT -->
+<section id="tab-prisma" class="tab">
+  <header class="head row-head"><div><p class="kicker">Step 5</p><h1>Export</h1>
+    <p class="lede">One PDF with a section per article, the same text as Markdown for your AI agent, the original files, spreadsheets and PRISMA.</p></div>
+    <div class="toolbar">
+      <select id="packetScope" class="pill-select"><option value="full_text_stage">Reports at full-text stage</option><option value="included">Included reports</option><option value="screened">All screened</option><option value="all">All reports</option></select>
+      <label class="inline small"><input type="checkbox" id="packetFT" checked> with full text</label>
+      <a id="packetZip" class="btn-primary" href="#"><span>Download packet</span></a>
+    </div></header>
+  <div class="two">
+    <div class="glass card-lg"><div class="card-head"><h2>PRISMA 2020</h2></div><div id="prismaSvg" class="svgbox"></div></div>
+    <div class="glass card-lg"><div class="card-head"><h2>Totals check</h2></div><div id="prismaChecks"></div><details class="fold-plain"><summary>Raw counts</summary><pre id="prismaCounts" class="code"></pre></details></div>
+  </div>
+  <details class="glass fold"><summary>PRISMA-S search appendix</summary><pre id="prismaS" class="code prismas"></pre></details>
+</section>
+
+<!-- ======================================================== STUDIES -->
+<section id="tab-studies" class="tab">
+  <header class="head"><p class="kicker">Tools</p><h1>Studies</h1>
+    <p class="lede">A paper, its preprint, a conference abstract and a registry entry can describe one study. They stay separate, linked here, so nothing is counted twice.</p></header>
+  <div class="glass card-lg"><div class="card-head"><h2>Suggested links</h2></div><div id="studySugg"></div></div>
+  <div class="glass card-lg"><div class="card-head"><h2>Link manually</h2></div>
+    <div class="form-row"><input id="newStudyLabel" placeholder="Study label"><input id="newStudyReports" placeholder="Report IDs, e.g. RPT-3, RPT-9"><button id="createStudy" class="btn-primary small">Create study</button></div>
+    <div class="form-row"><input id="clA" placeholder="STU-a" size="7"><input id="clB" placeholder="STU-b" size="7"><select id="clKind"><option>overlapping_cohort</option><option>shared_control</option><option>same_animals</option><option>extension</option></select><input id="clNotes" placeholder="Notes"><button id="addCL" class="btn-soft">Add cohort link</button></div>
+  </div>
+  <div id="studiesList" class="grid-cards"></div>
+</section>
+
+<!-- ======================================================== ADJUDICATION -->
+<section id="tab-adjudication" class="tab">
+  <header class="head row-head"><div><p class="kicker">Tools</p><h1>Adjudication</h1></div>
+    <div class="toolbar"><select id="adjStage" class="pill-select"><option value="title_abstract">Title &amp; abstract</option><option value="full_text">Full text</option></select><input id="adjudicator" class="pill-input" placeholder="Adjudicator name"></div></header>
+  <div id="adjList" class="stack"></div>
+</section>
+
+<!-- ======================================================== EXTRACTION -->
+<section id="tab-extraction" class="tab">
+  <header class="head"><p class="kicker">Tools</p><h1>Extraction &amp; analysis</h1>
+    <p class="lede">Data are stored per study, experiment, arm, outcome and time point. Only rows a reviewer verifies enter the meta-analysis.</p></header>
+  <div class="glass card-lg">
+    <div class="card-head"><h2>Extracted data</h2><div class="toolbar"><select id="exFilter" class="pill-select"><option value="">All rows</option><option>proposed</option><option>entered</option><option>verified</option><option>rejected</option></select><input id="verifier" class="pill-input" placeholder="Verifier name"></div></div>
+    <div id="exList" class="table-wrap"></div>
+    <details class="fold-plain"><summary>Add a row</summary>
+      <form id="exForm" class="form-grid four">
+        <label>Report ID<input name="report_id" required></label><label>Experiment<input name="experiment"></label>
+        <label>Outcome<input name="outcome" required></label><label>Time point<input name="timepoint"></label>
+        <label>Arm<input name="arm" required></label><label>Role<select name="arm_role"><option>intervention</option><option>control</option></select></label>
+        <label>Control group id<input name="control_group_id"></label><label>n<input name="n" type="number" step="any"></label>
+        <label>Mean<input name="mean" type="number" step="any"></label><label>SD<input name="sd" type="number" step="any"></label>
+        <label>SE<input name="se" type="number" step="any"></label><label>Unit<input name="unit"></label>
+        <label>Origin<select name="value_origin"><option>reported</option><option>calculated</option><option>figure_derived</option><option>author_provided</option></select></label>
+        <label>Derivation<input name="derivation"></label><label>Source location<input name="source_location" required placeholder="Table 2, p. 5, Fig 3B"></label>
+        <label>Passage<input name="source_passage"></label>
+        <div class="right full"><button class="btn-primary small">Add row</button></div>
+      </form>
+    </details>
+  </div>
+  <div class="glass card-lg">
+    <div class="card-head"><h2>Analysis plan</h2><a id="analysisZip" href="#" class="text-btn">Download analysis.zip</a></div>
+    <textarea id="planJson" rows="10" class="code-input"></textarea>
+    <div class="form-row"><button id="savePlan" class="btn-soft">Save plan</button><button id="checkPlan" class="btn-soft">Check before pooling</button><button id="runAnalysis" class="btn-primary small">Run meta-analysis</button></div>
+    <div id="analysisOut"></div>
+  </div>
+</section>
+
+<!-- ======================================================== PROTOCOL -->
+<section id="tab-protocol" class="tab">
+  <header class="head row-head"><div><p class="kicker">Tools</p><h1>PICOS protocol</h1><p id="protoVersions" class="meta"></p></div>
+    <div class="toolbar"><button id="draftQuery" class="btn-soft">Draft a search from this</button><button id="saveProto" class="btn-primary small">Save version</button></div></header>
+  <div class="glass card-lg">
+    <div class="form-grid">
+      <label class="full">Review question<textarea id="pQuestion" rows="2"></textarea></label>
+      <label>Evidence<select id="pType"><option>human</option><option>animal</option><option>mixed</option></select></label>
+      <label>Reviewers, title &amp; abstract<select id="pRevTA"><option>1</option><option selected>2</option></select></label>
+      <label>Reviewers, full text<select id="pRevFT"><option>1</option><option selected>2</option></select></label>
+    </div>
+  </div>
+  <div class="glass card-lg table-wrap">
+    <table class="crit"><thead><tr><th>ID</th><th>Element</th><th>Label</th><th>Status</th><th>Include</th><th>Exclude</th><th>Search terms</th><th>In search</th><th></th></tr></thead><tbody id="critBody"></tbody></table>
+    <div class="form-row"><button id="addCrit" class="btn-soft">Add criterion</button></div>
+  </div>
+  <div class="glass card-lg">
+    <label>Full-text exclusion reasons, one per line<textarea id="pReasons" rows="4"></textarea></label>
+    <div class="form-row"><input id="pNote" placeholder="What changed in this version" style="flex:1"></div>
+    <pre id="protoMsg" class="msg"></pre>
+  </div>
+</section>
+
+<!-- ======================================================== SETTINGS -->
+<section id="tab-settings" class="tab">
+  <header class="head"><p class="kicker">Setup</p><h1>Databases &amp; keys</h1>
+    <p class="lede">Keys are stored in your macOS Keychain. They are never shown again, never written to logs or exports, and never visible to AI agents.</p></header>
+  <div id="sourcesList" class="grid-cards"></div>
+</section>
+
+</main>
+
+<dialog id="dlg"><form method="dialog"><div id="dlgBody"></div><div class="dlg-foot"><button value="cancel" class="btn-soft">Close</button></div></form></dialog>
+<div id="toasts" aria-live="polite"></div>
+<script type="module" src="/static/cosmos.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
